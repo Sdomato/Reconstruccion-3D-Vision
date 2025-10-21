@@ -1,0 +1,15 @@
+capture:
+  mode: disk
+  folder: datasets/stereo_budha_board/calib
+  left_glob: calib_left_*.jpg
+  right_glob: calib_right_*.jpg
+  resolution: [1920, 1080]   # ancho, alto
+
+pattern:
+  type: chessboard
+  cols: 9        # esquinas internas (si no detecta, probá 10x7)
+  rows: 6
+  square_mm: 20.0  # tamaño del cuadrado en mm (ajustable luego)
+
+output:
+  dir: data
